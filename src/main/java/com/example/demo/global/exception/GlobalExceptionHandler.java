@@ -21,6 +21,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler
     public ModelAndView handleGeneralException(Exception ex) {
+        log.error("Exception = {}", ex.getMessage(), ex);
         ModelAndView mav = new ModelAndView("error/error");
         return mav;
     }
