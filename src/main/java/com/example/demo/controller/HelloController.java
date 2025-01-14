@@ -13,11 +13,6 @@ public class HelloController {
 
     private final HelloService helloService;
 
-    @GetMapping("/")
-    public String main() {
-        return "index";
-    }
-
     @GetMapping("/hello")
     public String hello(@RequestParam int age) {
         helloService.validate(age);
